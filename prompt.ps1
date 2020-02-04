@@ -77,7 +77,7 @@ function global:prompt {
 
 
 # Set this alias every time PowerShell launches so I stop mistyping code-insiders
-Set-Alias code code-insiders
+#Set-Alias code code-insiders
 
 # Get some nice icons
-Import-Module Terminal-Icons -Force
+#Import-Module Terminal-Icons -Force
