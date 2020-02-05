@@ -1,3 +1,9 @@
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+
+function Update-PSVersion {
+    iex "& { $(irm https://aka.ms/install-powershell.ps1) } -UseMSI -Preview"
+}
+
 $global:forePromptColor = 0
 $global:leftArrow = [char]0xe0b2
 $global:rightArrow = [char]0xe0b0

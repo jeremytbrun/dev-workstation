@@ -56,4 +56,4 @@ $fontFolder.CopyHere("$($env:TEMP)\CaskaydiaCoveNF.ttf", 0x10)
 # Make for a neat looking PS prompt for each profile
 $profileContent = (Invoke-WebRequest 'https://raw.githubusercontent.com/jeremytbrun/dev-workstation/master/prompt.ps1' -UseBasicParsing).Content
 
-Add-Content -Path $profile.CurrentUserAllHosts -Value $profileContent -Force
+Set-Content -Path $profile.CurrentUserAllHosts -Value $profileContent -Force
