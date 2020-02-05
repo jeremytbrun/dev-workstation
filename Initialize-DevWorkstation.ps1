@@ -48,7 +48,7 @@ Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer
 
 # Download and install a font pack that works with terminal-icons and the other fun stuff I'm doing in my prompt
 # Still going to need to configure ConEmu to use the font, VS Code will get it through settings sync
-Invoke-WebRequest 'https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/CascadiaCode/complete/Caskaydia%20Cove%20Nerd%20Font%20Complete%20Windows%20Compatible.ttf' -OutFile "$($env:TEMP)\CaskaydiaCoveNF.ttf"
+Invoke-WebRequest 'https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/CascadiaCode/complete/Caskaydia%20Cove%20Nerd%20Font%20Complete%20Windows%20Compatible.ttf' -OutFile "$($env:TEMP)\CaskaydiaCoveNF.ttf"
 $fontShell = New-Object -ComObject Shell.Application
 $fontFolder = $fontShell.Namespace(0x14)
 $fontFolder.CopyHere("$($env:TEMP)\CaskaydiaCoveNF.ttf", 0x10)
